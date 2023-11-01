@@ -1,7 +1,7 @@
 {- Lab 1
-   Date: 
-   Authors:
-   Lab group:
+   Date: 11/10-23
+   Authors: Agnes Tomsmark, Melisa Zanjani 
+   Lab group: 34
  -}
 --------------------------------------------
 power :: Integer -> Integer -> Integer
