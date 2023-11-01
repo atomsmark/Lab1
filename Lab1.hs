@@ -20,7 +20,7 @@ stepsPower n k = k + 1
 
 -- B -------------------------
 -- power1
-
+power1 :: Integer -> Integer -> Integer
 power1 n k | k < 0 = error "power: negative argument"
 power1 n 0         = 1
 power1 n k         = product (replicate (fromInteger k) n)
@@ -28,7 +28,7 @@ power1 n k         = product (replicate (fromInteger k) n)
 
 -- C -------------------------
 -- power2
-
+power2 :: Integer -> Integer -> Integer
 power2 n k | k < 0  = error "power: negative argument"
 power2 n 0          = 1
 power2 n k | odd k  = n * (power2 n (k-1))
@@ -47,6 +47,7 @@ power2 n k | odd k  = n * (power2 n (k-1))
 
 -- 
 --2.
+prop_powers :: Integer -> Integer -> Bool
 prop_powers n k = power n k == power1 n k && power1 n k == power2 n k
 
 --
@@ -59,5 +60,6 @@ powerTest = prop_powers 3 8
 
 --
 --4.
+prop_powers' :: Integer -> Integer
 prop_powers' n k = prop_powers n (abs k)
                
