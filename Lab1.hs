@@ -56,4 +56,5 @@ powerTest = prop_powers 3 8
           && prop_powers 3 4
 
 --
-prop_powers' = undefined
+prop_powers' n k = prop_powers n (abs k)
+               
